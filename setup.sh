@@ -189,8 +189,8 @@ PYTHON_PATH=$(which python3)
 
 # 智能检测优先级前缀（对齐 Windows 的高优先级逻辑）
 if [[ $EUID -eq 0 ]]; then
-    NICE_PREFIX="nice -n -10"
-    echo -e "   运行优先级: 高 (nice -n -10)"
+    NICE_PREFIX="nice -n -20"
+    echo -e "   运行优先级: 高 (nice -n -20)"
 else
     echo -e "${YELLOW}⚠️  非 root 用户，cron 任务将以默认优先级运行。${NC}"
     NICE_PREFIX=""
